@@ -31,6 +31,8 @@ public class coverageReport {
                     totalRows=new Calculate(path,sheet).generateCoverageData();
                 }
                 WriteExcel.writeTotals(path,totalRows);
+                WriteExcel.highlighter(path,totalRows);
+
 
             }catch (Exception e){
                 e.printStackTrace();

@@ -115,12 +115,12 @@ public class Calculate {
 //            XSSFSheet xssfSheet = inputWorkbook.createSheet("Statistics");
             xssfSheet.createRow(iterator);
             xssfSheet.getRow(iterator).createCell(0).setCellValue("Feature");
-            xssfSheet.getRow(iterator).createCell(1).setCellValue("Covered goals");
-            xssfSheet.getRow(iterator).createCell(2).setCellValue("Automatable goals");
-            xssfSheet.getRow(iterator).createCell(3).setCellValue("Implemented goals");
-            xssfSheet.getRow(iterator).createCell(4).setCellValue("Total goals");
-            xssfSheet.getRow(iterator).createCell(5).setCellValue("Coverage percentage");
-            xssfSheet.getRow(iterator).createCell(6).setCellValue("Automatable percentage");
+            xssfSheet.getRow(iterator).createCell(1).setCellValue("Automated");
+            xssfSheet.getRow(iterator).createCell(2).setCellValue("Planned for automation");
+            xssfSheet.getRow(iterator).createCell(3).setCellValue("Number of test goals/use cases");
+    //        xssfSheet.getRow(iterator).createCell(4).setCellValue("Total goals");
+            xssfSheet.getRow(iterator).createCell(5).setCellValue("Coverage %");
+            xssfSheet.getRow(iterator).createCell(6).setCellValue("Planned for Automation %");
 
             xssfSheet.getRow(iterator).createCell(8).setCellValue("Feature");
             xssfSheet.getRow(iterator).createCell(9).setCellValue("P1");
@@ -163,7 +163,7 @@ public class Calculate {
         xssfSheet.getRow(iterator).createCell(1).setCellValue(coveredGoals);
         xssfSheet.getRow(iterator).createCell(2).setCellValue(totalGoals-fniGoals-manualGoals);
         xssfSheet.getRow(iterator).createCell(3).setCellValue(totalGoals-fniGoals);
-        xssfSheet.getRow(iterator).createCell(4).setCellValue(totalGoals);
+  //      xssfSheet.getRow(iterator).createCell(4).setCellValue(totalGoals);
         if((totalGoals-fniGoals)!=0)
             xssfSheet.getRow(iterator).createCell(5).setCellValue(perc);
         else
